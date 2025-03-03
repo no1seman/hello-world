@@ -1,0 +1,31 @@
+[package]
+name = "hello-world"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[dependencies]
+bytes = "1.10.0"
+clap = { version = "4.5.31", features = ["derive", "env"] }
+http = "1.2.0"
+http-body-util = "0.1.2"
+hyper = { version = "1.6.0", features = ["full"] }
+hyper-util = { version = "0.1.10", features = ["full"] }
+log = "0.4.26"
+pki-types = { package = "rustls-pki-types", version = "1.11.0" }
+pretty_env_logger = "0.5.0"
+rustls = { version = "0.23.23", default-features = false, features = ["std"] }
+rustls-pemfile = "2.2.0"
+rustls-post-quantum = "0.2.2"
+tokio = { version = "1.43.0", features = ["full"] }
+tokio-rustls = "0.26.1"
+rpmalloc = "0.2.2"
+mimalloc = "0.1.43"
+
+[profile.release]
+debug = false
+opt-level = 3
+lto = "fat"
+strip = true

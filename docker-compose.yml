@@ -1,0 +1,11 @@
+name: proxy
+
+services:
+  hello-world:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      network: host
+    ports:
+      - "3000:3000"
+    network_mode: host

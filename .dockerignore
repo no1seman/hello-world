@@ -1,0 +1,10 @@
+Vagrantfile
+Dockerfile
+.gitignore
+.dockerignore
+.history
+.vscode
+.git
+.vagrant
+README.md
+target
