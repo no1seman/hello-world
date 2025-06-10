@@ -1,4 +1,4 @@
-FROM rust:1.85 AS cargo-build
+FROM rust:1.86 AS cargo-build
 
 # Make and build stub
 WORKDIR /usr/src/hello-world

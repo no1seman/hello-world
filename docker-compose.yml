@@ -5,7 +5,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      network: host
-    ports:
-      - "3000:3000"
     network_mode: host
+    environment:
+      - HTTP_BIND_ADDRESS=0.0.0.0
+      - HTTP_BIND_PORT=3000
+      - HTTP_THREADS=4
+      - HTTP_LOG_LEVEL=info
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 512M
