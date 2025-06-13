@@ -21,8 +21,8 @@ rustls-pemfile = "2.2.0"
 rustls-post-quantum = "0.2.2"
 tokio = { version = "1.45.1", features = ["full"] }
 tokio-rustls = "0.26.2"
-tcmalloc = "0.3"
-get_if_addrs = "0.5"
+tcmalloc = "0.3.0"
+get_if_addrs = "0.5.3"
 
 [profile.release]
 debug = false
